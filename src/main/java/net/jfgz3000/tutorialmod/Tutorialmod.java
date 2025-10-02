@@ -1,6 +1,9 @@
 package net.jfgz3000.tutorialmod;
 
+import net.jfgz3000.tutorialmod.block.ModBlocks;
+import net.jfgz3000.tutorialmod.item.ModCreativeModeTabs;
 import net.jfgz3000.tutorialmod.item.Moditems;
+import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import org.slf4j.Logger;
 
@@ -39,7 +42,10 @@ public class Tutorialmod {
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
 
+        ModCreativeModeTabs.register(modEventBus);
+
         Moditems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -63,7 +69,10 @@ public class Tutorialmod {
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS){
             event.accept(Moditems.BISMUTH);
             event.accept(Moditems.RAW_BISMUTH);
-
+        }
+        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.BISMUTH_BLOCK);
+            event.accept(ModBlocks.BISMUTH_ORE);
         }
     }
     // You can use SubscribeEvent and let the Event Bus discover methods to call

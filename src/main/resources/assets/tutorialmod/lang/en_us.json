@@ -2,11 +2,18 @@
   "item.tutorialmod.bismuth": "Bismuth",
   "item.tutorialmod.raw_bismuth": "Raw_Bismuth",
   "item.tutorialmod.chisel": "Chisel",
+  "item.tutorialmod.starlight_ashes": "Starlight Ashes",
+  "item.tutorialmod.frostfire_ice": "Frostfire Ice",
 
   "block.tutorialmod.bismuth_block": "Block of Bismuth",
   "block.tutorialmod.bismuth_ore": "Bismuth Ore",
 
-  "creativetab.tutorialmod.bismuth_items": "Bismuth Items",
-  "creativetab.tutorialmod.bismuth_blocks": "Bismuth Blocks"
+  "block.tutorialmod.magic_block": "Magic blocks",
+  "block.tutorialmod.reverse_magic_block": "Reverse magic block",
 
+  "creativetab.tutorialmod.bismuth_items": "Bismuth Items",
+  "creativetab.tutorialmod.bismuth_blocks": "Bismuth Blocks",
+
+  "item.tutorialmod.radish": "Radish",
+  "item.tutorialmod.granada": "Granada"
 }

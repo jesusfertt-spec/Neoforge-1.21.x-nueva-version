@@ -25,6 +25,9 @@ public class ChisellItem extends Item {
         CHISEL_MAP.put(Blocks.DEEPSLATE, Blocks.DEEPSLATE_BRICKS);
         CHISEL_MAP.put(Blocks.COPPER_BLOCK, Blocks.GOLD_BLOCK);
         CHISEL_MAP.put(Blocks.RAW_IRON_BLOCK, Blocks.IRON_BLOCK);
+        CHISEL_MAP.put(Blocks.RAW_GOLD_BLOCK, Blocks.GOLD_BLOCK);
+        CHISEL_MAP.put(Blocks.AMETHYST_BLOCK, Blocks.AMETHYST_CLUSTER);
+        CHISEL_MAP.put(Blocks.SHROOMLIGHT, Blocks.OCHRE_FROGLIGHT);
         // Aquí tu bloque custom
         // ⚠️ asegúrate que ModBlocks.BISMUTH_BLOCK esté bien registrado
         // CHISEL_MAP.put(Blocks.NETHERRACK, ModBlocks.BISMUTH_BLOCK.get());

@@ -2,6 +2,8 @@ package net.jfgz3000.tutorialmod.block;
 
 import com.mojang.blaze3d.shaders.Uniform;
 import net.jfgz3000.tutorialmod.Tutorialmod;
+import net.jfgz3000.tutorialmod.block.custom.MagicBlock;
+import net.jfgz3000.tutorialmod.block.custom2.ReverseMagicBlock;
 import net.jfgz3000.tutorialmod.item.Moditems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
@@ -19,6 +21,8 @@ import java.util.function.Supplier;
 public class ModBlocks {
     public static final DeferredRegister.Blocks BLOCKS =
             DeferredRegister.createBlocks(Tutorialmod.MOD_ID);
+    public static final DeferredBlock<Block> REVERSE_MAGIC_BLOCK = registerBlock("reverse_magic_block" ,
+            () -> new ReverseMagicBlock(BlockBehaviour .Properties.of().strength(2f).requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> BISMUTH_BLOCK = registerBlock("bismuth_block",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f)
@@ -30,6 +34,10 @@ public class ModBlocks {
                     .strength(3f)
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.ANCIENT_DEBRIS)));
+    public static final DeferredBlock<Block> MAGIC_BLOCK = registerBlock("magic_block" ,
+            () -> new MagicBlock(BlockBehaviour .Properties.of().strength(2f).requiresCorrectToolForDrops()));
+
+
 
     // Helper para registrar bloque + su BlockItem
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
